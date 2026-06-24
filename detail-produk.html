@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Produk | Desa Depok</title>
+    <meta name="description" content="Detail produk UMKM Desa Depok.">
+
+    <!-- Poppins Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+
+    <!-- Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css?v=3">
+</head>
+
+<body class="bg-white">
+
+    <!-- Header / Navbar -->
+    <header id="header">
+        <div class="container navbar">
+            <a href="index.html" class="logo">
+                Desa<span>Depok</span>
+            </a>
+
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Beranda</a></li>
+                    <li><a href="profil.html" class="nav-link">Profil</a></li>
+                    <li><a href="index.html#layanan" class="nav-link">Layanan</a></li>
+                    <li><a href="umkm.html" class="nav-link active">UMKM</a></li>
+                    <li><a href="index.html#kontak" class="nav-link">Kontak</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="container">
+            <h1 id="header-product-title">Detail <span>Produk</span></h1>
+            <p>Informasi lengkap mengenai produk UMKM Desa Depok</p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container detail-section">
+
+        <!-- Loading State -->
+        <div id="detail-loading" style="text-align:center; padding: 60px 0;">
+            <p style="font-size:1.2rem; color: var(--text-muted);">Memuat data produk...</p>
+        </div>
+
+        <!-- Product Detail Content -->
+        <div class="detail-grid" id="detail-content" style="display: none;">
+            <div class="detail-img-wrapper">
+                <img id="p-gambar" src="" alt="Foto Produk" class="detail-img">
+            </div>
+
+            <div class="detail-info">
+                <div class="detail-badge-cat">
+                    <span id="p-kategori" class="detail-category">KATEGORI</span>
+                    <span id="p-badge" class="detail-badge" style="display: none;">BADGE</span>
+                </div>
+
+                <h2 id="p-nama" class="detail-title">Nama Produk</h2>
+                <div id="p-harga" class="detail-price">Rp 0</div>
+
+                <div class="detail-meta-item">
+                    <i class='bx bx-user'></i>
+                    <span>Penjual: <strong id="p-penjual">Nama Penjual</strong></span>
+                </div>
+
+                <div class="detail-meta-item">
+                    <i class='bx bxl-whatsapp'></i>
+                    <span>WhatsApp: <strong id="p-whatsapp">0812xxxxxxxx</strong></span>
+                </div>
+
+                <div class="detail-desc-title">Deskripsi Produk</div>
+                <p id="p-deskripsi" class="detail-desc">Deskripsi lengkap produk.</p>
+
+                <div class="detail-actions">
+                    <a id="btn-buy-wa" href="#" class="btn btn-wa" target="_blank">
+                        <i class='bx bxl-whatsapp' style="font-size: 1.2rem;"></i>
+                        Hubungi via WhatsApp
+                    </a>
+                    <a href="umkm.html" class="btn btn-outline">
+                        <i class='bx bx-arrow-back'></i> Kembali
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Error State -->
+        <div id="detail-error" style="display: none; text-align: center; padding: 60px 0;">
+            <div style="font-size: 4rem; color: var(--primary-light); margin-bottom: 20px;">
+                <i class='bx bx-error-circle' style="color: var(--text-muted);"></i>
+            </div>
+            <h3 style="color: var(--text-main); margin-bottom: 12px; font-size: 1.6rem;">Produk Tidak Ditemukan</h3>
+            <p style="color: var(--text-muted); margin-bottom: 28px;">Produk yang Anda cari tidak tersedia atau telah dihapus.</p>
+            <a href="umkm.html" class="btn btn-primary">
+                <i class='bx bx-arrow-back'></i> Kembali ke Etalase
+            </a>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-logo">Desa<span>Depok</span></div>
+
+                <div class="footer-links">
+                    <a href="index.html">Beranda</a>
+                    <a href="profil.html">Profil</a>
+                    <a href="index.html#layanan">Layanan</a>
+                    <a href="umkm.html">UMKM</a>
+                </div>
+
+                <div class="footer-social">
+                    <a href="#" aria-label="Twitter"><i class='bx bxl-twitter'></i></a>
+                    <a href="#" aria-label="Facebook"><i class='bx bxl-facebook'></i></a>
+                    <a href="#" aria-label="Instagram"><i class='bx bxl-instagram'></i></a>
+                    <a href="#" aria-label="YouTube"><i class='bx bxl-youtube'></i></a>
+                </div>
+            </div>
+
+            <div class="copyright">
+                &copy; <span id="year"></span> Bina Desa. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/data.js?v=3"></script>
+    <script src="js/main.js?v=3"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            // Update Year
+            const yearSpan = document.getElementById('year');
+            if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+
+            // Navbar Toggle (Mobile)
+            const navToggle = document.getElementById('nav-toggle');
+            const navMenu = document.getElementById('nav-menu');
+            if (navToggle && navMenu) {
+                navToggle.addEventListener('click', () => {
+                    navMenu.classList.toggle('show-menu');
+                });
+            }
+
+            // Header Scroll Effect
+            const header = document.getElementById('header');
+            if (header) {
+                window.addEventListener('scroll', () => {
+                    header.classList.toggle('scrolled', window.scrollY >= 50);
+                });
+            }
+
+            // Load Product Detail
+            const getQueryParam = (name) => new URLSearchParams(window.location.search).get(name);
+            const productId = parseInt(getQueryParam('id'));
+            const loadingDiv = document.getElementById('detail-loading');
+            const contentDiv = document.getElementById('detail-content');
+            const errorDiv = document.getElementById('detail-error');
+
+            if (!isNaN(productId)) {
+                const umkmList = await getUMKM();
+                const product = umkmList.find(p => p.id === productId);
+
+                if (loadingDiv) loadingDiv.style.display = 'none';
+
+                if (product) {
+                    if (contentDiv) contentDiv.style.display = 'grid';
+
+                    const headerTitle = document.getElementById('header-product-title');
+                    if (headerTitle) headerTitle.innerHTML = `${product.nama.split(' ')[0]} <span>${product.nama.split(' ').slice(1).join(' ') || 'Produk'}</span>`;
+
+                    document.getElementById('p-nama').textContent = product.nama;
+                    document.getElementById('p-kategori').textContent = product.kategori;
+                    document.getElementById('p-harga').textContent = product.harga;
+                    document.getElementById('p-penjual').textContent = product.penjual;
+                    document.getElementById('p-deskripsi').textContent = product.deskripsi || 'Tidak ada deskripsi untuk produk ini.';
+
+                    const imgEl = document.getElementById('p-gambar');
+                    if (imgEl) {
+                        imgEl.src = product.gambar;
+                        imgEl.alt = product.nama;
+                    }
+
+                    const badgeEl = document.getElementById('p-badge');
+                    if (badgeEl) {
+                        if (product.badge) {
+                            badgeEl.textContent = product.badge;
+                            badgeEl.style.display = 'inline-block';
+                        } else {
+                            badgeEl.style.display = 'none';
+                        }
+                    }
+
+                    const waNumber = product.whatsapp || '6281234567890';
+                    document.getElementById('p-whatsapp').textContent = '+' + waNumber;
+
+                    const btnBuyWa = document.getElementById('btn-buy-wa');
+                    if (btnBuyWa) {
+                        btnBuyWa.href = `https://wa.me/${waNumber}?text=Halo,%20saya%20tertarik%20membeli%20${encodeURIComponent(product.nama)}`;
+                    }
+                } else {
+                    if (errorDiv) errorDiv.style.display = 'block';
+                }
+            } else {
+                if (loadingDiv) loadingDiv.style.display = 'none';
+                if (errorDiv) errorDiv.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+
+</html>
